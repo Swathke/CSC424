@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: grey;
+}		
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="CurrentTestingMap.html">Map</a>
+  <a href="#" class="right">Back</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h1>Two-Toed Sloth</h1>
+	<img src="ZooPic.jpg" style="width:500px;height:500px;">
+	<hr style="clear:both;"/>
+	<h3 style="text-allign:left;float:left;">Scientific Name:</h3>
+	<h5 style="text-align:right;float:right;">Choloepus hoffmanni</h5>
+	<hr style="clear:both;"/>
+    <h3 style="text-allign:left;float:left;">Class:</h3>
+	<h5 style="text-align:right;float:right;">Mammal</h5>
+	<hr style="clear:both;"/>
+    <h3 style="text-allign:left;float:left;">Diet:</h3>
+	<h5 style="text-align:right;float:right;">Herbivore</h5>
+	<hr style="clear:both;"/>
+	<h3 style="text-allign:left;float:left;">Region:</h3>
+	<h5 style="text-align:right;float:right;">Central and South America</h5>
+	<hr style="clear:both;"/>
+	<h3 style="text-allign:left;float:left;">Environment:</h3>
+	<h5 style="text-align:right;float:right;">Jungle</h5>
+	<hr style="clear:both;"/>
+	<h3 style="text-allign:left;float:left;">Active:</h3>
+	<h5 style="text-align:right;float:right;">Nocturnal</h5>
+	<hr style="clear:both;"/>
+  </div>
+  <div class="main">
+		<h2>Physical description</h2>
+		<p>Two-toed sloths are some of the slowest moving mammals on earth.
+			In fact, they move so slowly that in the wild you will often find 
+			them with a coat of algae and moths, creating a tiny ecosystem on 
+			their back.</p>
+		<p>Their long, curved claws allow them to easily grip 
+			the branches of trees as they hang above the forest. Sloths have 
+			eight vertebrae in their necks, while almost all other mammals 
+			have seven.</p>
+		<p>All two-toed sloths have a double-layered coat, 
+			consisting of a dense, soft undercoat and long coarse overcoat to 
+			provide insulation and help with rainwater runoff.</p>
+		<hr style="clear:both;"/>
+		<h2>Physical description</h2>
+		<p>Two-toed sloths are herbivores meaning they like to eat almost 
+			anything that is leafy and green. They will also eat some bird 
+			eggs or small insects occasionally.</p>
+		<hr style="clear:both;"/>
+		<h2>Mating Practices</h2>
+		<p>Two-toed sloths live mainly solitary lives. When a female comes 
+			into heat and is ready to mate, she screams very loudly to attract 
+			her suitors. Sloth mating and birth all take place in treetops. A 
+			baby sloth clings to its mother constantly and rarely moves besides 
+			feeding for months.</p>
+		<hr style="clear:both;"/>
+		<h2>Fun Facts</h2>
+		<p>They can spend their entire lives in treetops, but will come down 
+			to the ground on occasion.</p>
+		<p>When on the ground they are normally very 
+			clumsy, but if they make it to water, they swim well due to their 
+			long limbs.</p>
+		<hr style="clear:both;"/>
+		<h2>About Our sloths</h2>
+		<p>There are three sloths at the Hattiesburg Zoo, Chewy, Mo, and Maple.
+		<p>Chewy is 5 years old, and he was named after Chewbacca from the Star 
+			Wars series. Mo is 10 years old, and she was named after molasses 
+			due to her fur resembling the color of the sticky substance.</p>
+		<p>Maple is Chewy and Mo's daughter. She was born on June 28, 2018, and was 
+			a wonderful surprise for zookeepers. They did not know Mo was pregnant
+			until Maple was born.</p>
+  </div>
+</div>
+</body>
+</html>
