@@ -26,33 +26,9 @@ body {
 }
 
 
+/* The map properites
 /* The map properites*/
-#map {
-	background-image: url('pictures/ZooMap.jpg');
-	background-repeat: no-repeat;
-	font-family: Sans-serif, Arial;
-	font-size: 15px;
-	color: LightGrey;
-	text-transform: lowercase;
-	font-style: oblique;
-	height: 500px;
-	border-style: groove;
-	border-color: LightGrey;
-	position: relative;
-	min-height: 1150px;
-	max-height: 600px;
-	width: 700px;
-	min-width: 800px;
-	max-width: 400px;
-	padding: 30px;
-	margin: 20px auto;
-	border-radius: 25px;
-	text-align: center;
-	border-width: solid;
-	top: 10px;
-	left: 0px;
-	z-index: 10;
-}
+
 
 /* map front size */
 #map_title {
