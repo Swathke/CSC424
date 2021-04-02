@@ -12,18 +12,12 @@ body {
 	margin: 0;
 }
 
-/* #navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-} */
-
 #navbar {
   overflow: hidden;
   background-color: #707070;
+  /* position: sticky;
+  position: -webkit-sticky; */
+  top: 0;
 }
 
 #navbar a {
@@ -31,8 +25,9 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-decoration: none;
+	font-size: 17px;
 }
 
 #navbar a.right {
@@ -42,6 +37,39 @@ body {
 #navbar a:hover {
   background-color: #ccc;
   color: black;
+}
+
+#navbar a.search:hover {
+	  color: white;
+  background-color: #707070;
+}
+
+#navbar button {
+	font-size: 17px;
+  color: white;
+	background: #707070;
+	border: none;
+  text-decoration: none;
+	cursor: pointer;
+}
+
+#navbar button:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  #navbar a {
+    float: none;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+  #navbar input[type=text] {
+    float: none;
+    text-align: center;
+  }
 }
 
 #row {
@@ -73,20 +101,20 @@ body {
 }
 
 #instructions {
-	  background-color: #D3D3D3;
-		overflow: hidden;
-	  padding: 10px;
-		margin:0;
-		border:0;
-	  text-align: center;
-	  color: Black;
-	}
+  background-color: #D3D3D3;
+	overflow: hidden;
+  padding: 10px;
+	margin:0;
+	border:0;
+  text-align: center;
+  color: Black;
+}
 
-	#welcomeHeader {
-		  background-color: white;
-			overflow: hidden;
-		  padding: 10px;
-			margin:0;
-		  text-align: center;
-		  color: #4f9e8c;
-		}
+#welcomeHeader {
+  background-color: white;
+	overflow: hidden;
+  padding: 10px;
+	margin:0;
+  text-align: center;
+  color: #4f9e8c;
+}

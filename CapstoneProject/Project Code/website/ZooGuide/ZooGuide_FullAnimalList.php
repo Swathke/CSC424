@@ -6,11 +6,24 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+</style>
+
 <body>
 	<div id="navbar">
-	  <a href="ZooGuide_Home.php">Home</a>
+	  <a href="index.php">Home</a>
 	  <a href="ZooGuide_FullAnimalList.php">Animals</a>
 		<a href="javascript:goBack();" class="right">Back</a>
+		<a class="search">
+		<form style="margin: 0px;" action="ZooGuide_AnimalSearch.php" method="GET">
+			<input type="text" placehoder="Search" name="query"/>
+			<button type="submit" value="search">Search</button>
+		</form>
+		</a>
 		<script>
 			function goBack() {
 				window.history.back();
@@ -22,7 +35,6 @@
 		<div id="animalListSide">
 			<?php
 			include("ZooGuide_DBConnect.php");
-			// include("results.php");
 
 			$conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -36,7 +48,7 @@
 			// worked #1
 			if ($result->num_rows > 0) {
 				while ($row = $result->fetch_assoc()) {
-				echo '<a href="http://localhost/ZooGuide/ZooGuide_AnimalResults.php?id='.$row["common_name"].'">'.$row["common_name"].'</a>';
+				echo '<a href="ZooGuide_AnimalResults.php?id='.$row["common_name"].'">'.$row["common_name"].'</a>';
 				echo '<p></p>';
 				}
 			} else {

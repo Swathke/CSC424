@@ -49,9 +49,15 @@
 <body bgcolor="#F5F5DC">
 
 	<div id="navbar">
-	  <a href="ZooGuide_Home.php">Home</a>
-	  <a href="ZooGuide_FullAnimalList.php">Animals</a>
+		<a href="index.php">Home</a>
+		<a href="ZooGuide_FullAnimalList.php">Animals</a>
 		<a href="javascript:goBack();" class="right">Back</a>
+		<a class="search">
+		<form style="margin: 0px;" action="ZooGuide_AnimalSearch.php" method="GET">
+			<input type="text" placehoder="Search" name="query"/>
+			<button type="submit" value="search">Search</button>
+		</form>
+		</a>
 		<script>
 			function goBack() {
 				window.history.back();
@@ -62,9 +68,9 @@
 	<div id="row">
 		<div id="side">
 
-			<h1>Region 8</h1>
+			<h1>Australia</h1>
 
-			<img src="ZooPic.jpg" style="width:500px;height:500px;">
+			<img src="RegionsPNG/8.png" style="width:325px;">
 
 		</div>
 
@@ -74,7 +80,6 @@
 
 			<?php
 			  include("ZooGuide_DBConnect.php");
-			  // include("results.php");
 
 			  $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -82,17 +87,14 @@
 				die("Connection failed: " . $conn->connect_error);
 			  }
 
-			  // echo '<p>Connected successfully<p>';
-
 			  $sql = "SELECT * FROM animals Where zoo_region = '8'";
 			  $result = $conn->query($sql);
 
 			  // worked #1
 			  if ($result->num_rows > 0) {
 				while ($row = $result->fetch_assoc()) {
-				  echo '<a href="http://localhost/ZooGuide/ZooGuide_AnimalResults.php?id='.$row["common_name"].'">'.$row["common_name"].'</a>'; // ?id=' .$row['band_id'] . '
+				  echo '<a href="ZooGuide_AnimalResults.php?id='.$row["common_name"].'">'.$row["common_name"].'</a>';
 				  echo '<p></p>';
-				  // echo '<p>Common Name: ' . $row["common_name"] . ' - Scientific Name: ' . $row["scientific_name"] . ' - Endangerment Status: ' . $row["endangered"] . '<br>';
 				}
 			  } else {
 				  echo '<p>0 results<p>';
