@@ -1,4 +1,4 @@
-# Here is the import from the MySQL 
+# Here is the import from the MySQL
 # import the MySQLdb, using PyCharm Community Edition 2020.3.3
 import MySQLdb
 
@@ -6,7 +6,7 @@ import MySQLdb
 database = MySQLdb.connect(
     host="localhost",
     user="root",
-    passwd="YOURPASSWORD",  # enter YOUR password here
+    passwd="Daniel1994!",  # enter YOUR password here
     database="ZooGuide"  # database ZooGuide
 )
 
@@ -21,7 +21,7 @@ def data_check():
 
     # here we will write what area to check for, we use common name for
     # the animals to make sure all names of animals are entered in
-    cursor.execute("SELECT common_name "
+    cursor.execute("SELECT common_name, diet "
                    "FROM ZooGuide.animals ")
 
     # get the results
